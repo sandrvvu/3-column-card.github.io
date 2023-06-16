@@ -29,8 +29,6 @@ body {
 }
 
 .card {
-  border-radius: 25px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,7 +39,7 @@ body {
 
 .column {
   max-width: 208px;
-  height: 340px;
+  height: 380px;
   padding: 42px;
   position: relative;
 }
@@ -63,13 +61,14 @@ body {
 .header {
   font-family: "Big Shoulders Display", cursive;
   text-transform: uppercase;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 .info {
   color: var(--transparent-white);
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   letter-spacing: 0.2px;
+  line-height: 1.5rem;
 }
 
 .btn-learn-more {
@@ -94,12 +93,26 @@ body {
   color: var(--very-dark-cyan);
 }
 
-@media only screen and (max-width: 844px) {
+@media only screen and (max-width: 903px) {
+  .column {
+    border-radius: 0;
+  }
+  .card {
+     align-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   body {
     display: flex;
     width: 100%;
     overflow: scroll;
     flex-wrap: wrap;
+  }
+
+  .column {
+    margin: 0;
+    border-radius: 0;
   }
 
   .sedans {
